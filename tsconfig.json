@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "es2022",
+    "target": "es5",
+    "sourceMap": true,
+    "sourceRoot": "src",
+    "outDir": "dist"
+  },
+
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
