@@ -1,17 +1,12 @@
 import IBarcode, {BarcodeLine} from "../IBarcode";
 import * as codingData from './data/coding.json';
 import * as firstFigureData from './data/firstFigure.json';
-import * as _ from "lodash";
 
 class Ean13Barcode implements IBarcode {
     private generatedData?: BarcodeLine[];
 
     constructor(public readonly code: string) {
-        if (code.length !== 13) {
-            throw new Error('code length must be 13');
-        }
-
-        if (!/^[0-9]$/.test(code)) {
+        if (!/^[0-9]{13}$/.test(code)) {
             throw new Error('code is invalid');
         }
     }
