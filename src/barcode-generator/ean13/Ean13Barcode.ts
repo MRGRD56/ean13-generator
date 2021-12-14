@@ -22,8 +22,8 @@ class Ean13Barcode implements IBarcode {
 
         const coding = firstFigureData[this.code[0]] + 'RRRRRR';
         const data: BarcodeLine[] = Array.from(this.code)
-            .slice(1, 12)
-            .map((value, index) => Ean13Barcode.getNumberCode(value, coding[index - 1]));
+            .slice(1, 13)
+            .map((value, index) => Ean13Barcode.getNumberCode(value, coding[index]));
 
         this.generatedData = data;
         return data;
