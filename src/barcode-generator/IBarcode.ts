@@ -3,7 +3,7 @@ export type BarcodeLine = 0 | 1;
 interface IBarcode {
     readonly code: string;
     generateData(): BarcodeLine[];
-    generateImage(): unknown;
+    generateImage(showCode: boolean): Buffer;
 }
 
 export default IBarcode;
