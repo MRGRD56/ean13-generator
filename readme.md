@@ -5,4 +5,4 @@
 
 
 ### Example
-![Barcode](./out/barcode.svg)
+![Barcode](/demo/barcode.svg?raw=true)
